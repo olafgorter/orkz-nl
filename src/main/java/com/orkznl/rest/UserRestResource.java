@@ -26,7 +26,8 @@ public class UserRestResource {
 
     private final Logger LOG = LoggerFactory.getLogger("UserRestResource");
 
-    @RequestMapping("/getAllUsers")
+    @CrossOrigin
+    @RequestMapping("/getallusers")
     public ResponseEntity<List<UserDTO>> getAllUsers(){
 
         LOG.debug("Getting all users");
@@ -52,10 +53,33 @@ public class UserRestResource {
 
         UserDTO userDTO = userUseCase.login(username, password);
 
+        String loginOK = userDTO == null ? "0": "1";
         String loggedIn = userDTO == null ? "Login credentials incorrect" : "Login OK";
 
         JSONObject response = new JSONObject();
-        response.put("result", loggedIn);
+        response.put("loginOK", loginOK);
+        response.put("description", loggedIn);
+
+        return new ResponseEntity<>(response.toString(), HttpStatus.OK);
+    }
+    @CrossOrigin
+    @RequestMapping( "/save")
+    public ResponseEntity<String> save(@RequestBody UserDTO userDTO){
+
+        if(userDTO == null) {
+            return new ResponseEntity<String>("", HttpStatus.OK);
+        }
+
+        UserDTO savedUserDTO = userUseCase.save(userDTO);
+
+        JSONObject response = new JSONObject();
+        response.put("user", userDTO);
+
+        if(savedUserDTO == null || savedUserDTO.id <= 0){
+            response.put("saved", "n");
+        } else {
+            response.put("saved", "y");
+        }
 
         return new ResponseEntity<>(response.toString(), HttpStatus.OK);
     }

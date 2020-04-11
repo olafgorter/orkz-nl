@@ -13,17 +13,21 @@ public class User {
     private String password;
     private String email;
 
+    @ManyToOne
+    private Resident resident;
+
     @Version
     private Integer version;
 
     public User() {
     }
 
-    public User(String username, String password, String email) {
+    public User(String username, String password, String email, Resident resident) {
 
         this.username = username;
         this.password = password;
         this.email = email;
+        this.resident = resident;
     }
 
     @Override
@@ -66,9 +70,14 @@ public class User {
         this.email = email;
     }
 
+    public Resident getResident() { return resident; }
+
+    public void setResident(Resident resident) {this.resident = resident; }
+
     public Integer getVersion() {
         return version;
     }
+
 
 
 }

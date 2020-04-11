@@ -11,4 +11,6 @@ public interface ResidentRepository extends CrudRepository<Resident, Long> {
 
     List<Resident> findAll();
 
+    Resident getById(Long id);
+
 }

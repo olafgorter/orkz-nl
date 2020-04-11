@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class ChargePriceDTO {
     public Long id;
-    public ChargeDTO chargeDTO;
+    public ChargeDTO charge;
     public Double price;
     public Date start_date;
     public Date end_date;
@@ -20,7 +20,7 @@ public class ChargePriceDTO {
     public static ChargePriceDTO toDto(ChargePrice chargeprice){
         ChargePriceDTO chargepriceDTO = new ChargePriceDTO();
         chargepriceDTO.id = chargeprice.getId();
-        chargepriceDTO.chargeDTO = ChargeDTO.toDto(chargeprice.getCharge());
+        chargepriceDTO.charge = ChargeDTO.toDto(chargeprice.getCharge());
         chargepriceDTO.price = chargeprice.getPrice();
         chargepriceDTO.start_date = chargeprice.getStart_date();
         chargepriceDTO.end_date = chargeprice.getEnd_date();
@@ -31,6 +31,6 @@ public class ChargePriceDTO {
 
     @Override
     public String toString(){
-        return id + " " + chargeDTO.description + " " + price + " " + start_date + " " + end_date;
+        return id + " " + charge.description + " " + price + " " + start_date + " " + end_date;
     }
 }

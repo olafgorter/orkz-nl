@@ -8,7 +8,7 @@ public class UserDTO {
     public String username;
     public String password;
     public String email;
-    public ResidentDTO residentDTO;
+    public ResidentDTO resident;
     public Integer version;
 
     public static List<UserDTO> toDto(List<User> users){
@@ -25,7 +25,7 @@ public class UserDTO {
         userDTO.username = user.getUsername();
         userDTO.password = user.getPassword();
         userDTO.email = user.getEmail();
-        userDTO.residentDTO =  ResidentDTO.toDto( user.getResident());
+        userDTO.resident =  ResidentDTO.toDto( user.getResident());
         userDTO.version = user.getVersion();
 
         return userDTO;

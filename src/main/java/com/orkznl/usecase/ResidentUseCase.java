@@ -18,6 +18,13 @@ public class ResidentUseCase {
         List<Resident> residents = residentRepository.findAll();
 
         return ResidentDTO.toDto(residents);
-
     }
+
+    @Transactional
+    public ResidentDTO getById(Long id){
+        Resident resident = residentRepository.getById(id);
+
+        return ResidentDTO.toDto(resident);
+    }
+
 }

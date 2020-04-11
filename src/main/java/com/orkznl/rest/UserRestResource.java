@@ -46,21 +46,19 @@ public class UserRestResource {
 
     @CrossOrigin
     @RequestMapping("/login")
-    public ResponseEntity<String> login(@RequestBody String request) {
+    public ResponseEntity<UserDTO> login(@RequestBody String request) {
         JSONObject jsonObject = new JSONObject(request);
         String username = jsonObject.getString("username");
         String password = jsonObject.getString("password");
 
         UserDTO userDTO = userUseCase.login(username, password);
 
-        String loginOK = userDTO == null ? "0": "1";
-        String loggedIn = userDTO == null ? "Login credentials incorrect" : "Login OK";
+        if(userDTO == null){
+            userDTO = new UserDTO();
+            userDTO.id = -1L;
+        }
 
-        JSONObject response = new JSONObject();
-        response.put("loginOK", loginOK);
-        response.put("description", loggedIn);
-
-        return new ResponseEntity<>(response.toString(), HttpStatus.OK);
+        return new ResponseEntity<>(userDTO, HttpStatus.OK);
     }
     @CrossOrigin
     @RequestMapping( "/save")

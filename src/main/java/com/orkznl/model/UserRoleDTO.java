@@ -5,8 +5,8 @@ import java.util.stream.Collectors;
 
 public class UserRoleDTO {
     public Long id;
-    public UserDTO userDTO;
-    public RoleDTO roleDTO;
+    public UserDTO user;
+    public RoleDTO role;
     public Integer version;
 
     public static List<UserRoleDTO> toDto(List<UserRole> userrols){
@@ -17,8 +17,8 @@ public class UserRoleDTO {
     public static UserRoleDTO toDto(UserRole userrole){
         UserRoleDTO userroleDTO = new UserRoleDTO();
         userroleDTO.id = userrole.getId();
-        userroleDTO.userDTO = UserDTO.toDto( userrole.getUser());
-        userroleDTO.roleDTO = RoleDTO.toDto( userrole.getRole());
+        userroleDTO.user = UserDTO.toDto( userrole.getUser());
+        userroleDTO.role = RoleDTO.toDto( userrole.getRole());
         userroleDTO.version = userrole.getVersion();
 
         return userroleDTO;
@@ -26,6 +26,6 @@ public class UserRoleDTO {
 
     @Override
     public String toString(){
-        return id + " " + userDTO.username + " " + roleDTO.description;
+        return id + " " + user.username + " " + role.description;
     }
 }

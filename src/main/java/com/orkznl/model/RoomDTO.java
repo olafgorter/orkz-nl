@@ -5,8 +5,8 @@ import java.util.stream.Collectors;
 
 public class RoomDTO {
     public Long id;
-    public WardDTO wardDTO;
-    public Integer roomnumber;
+    public WardDTO ward;
+    public Integer roomNumber;
     public Integer version;
 
     public static List<RoomDTO> toDto(List<Room> rooms){
@@ -17,13 +17,13 @@ public class RoomDTO {
     public static RoomDTO toDto(Room room){
         RoomDTO roomDTO = new RoomDTO();
         roomDTO.id = room.getId();
-        roomDTO.wardDTO = WardDTO.toDto( room.getWard());
-        roomDTO.roomnumber = room.getRoomnumber();
+        roomDTO.ward = WardDTO.toDto( room.getWard());
+        roomDTO.roomNumber = room.getRoomnumber();
         roomDTO.version = room.getVersion();
 
         return roomDTO;
     }
 
     @Override
-    public String toString(){ return "Room: " + id + " " + wardDTO.description + " " + roomnumber; }
+    public String toString(){ return "Room: " + id + " " + ward.description + " " + roomNumber; }
 }

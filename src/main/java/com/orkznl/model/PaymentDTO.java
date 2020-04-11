@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class PaymentDTO {
     public Long id;
-    public ResidentDTO residentDTO;
+    public ResidentDTO resident;
     public Double  amount;
     public Date payment_date;
     public String description;
@@ -22,7 +22,7 @@ public class PaymentDTO {
     public static PaymentDTO toDto(Payment payment){
         PaymentDTO paymentDTO = new PaymentDTO();
         paymentDTO.id = payment.getId();
-        paymentDTO.residentDTO = ResidentDTO.toDto( payment.getResident());
+        paymentDTO.resident = ResidentDTO.toDto( payment.getResident());
         paymentDTO.amount = payment.getAmount();
         paymentDTO.payment_date = payment.getPayment_date();
         paymentDTO.description = payment.getDescription();
@@ -34,6 +34,6 @@ public class PaymentDTO {
 
     @Override
     public String toString(){
-        return id + " " + residentDTO.full_name + " " + amount + " " + payment_date + " " + description + " " + change_name + " " + change_date;
+        return id + " " + resident.fullName + " " + amount + " " + payment_date + " " + description + " " + change_name + " " + change_date;
     }
 }

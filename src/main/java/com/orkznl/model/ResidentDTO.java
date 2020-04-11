@@ -5,9 +5,9 @@ import java.util.stream.Collectors;
 
 public class ResidentDTO {
     public Long id;
-    public String full_name;
-    public RoomDTO roomDTO;
-    public String bank_account;
+    public String fullName;
+    public RoomDTO room;
+    public String bankAccount;
     public Integer version;
 
     public static List<ResidentDTO> toDto(List<Resident> residents){
@@ -18,14 +18,14 @@ public class ResidentDTO {
     public static ResidentDTO toDto(Resident resident){
         ResidentDTO residentDTO = new ResidentDTO();
         residentDTO.id = resident.getId();
-        residentDTO.full_name = resident.getFullName();
-        residentDTO.roomDTO= RoomDTO.toDto(resident.getRoom());
-        residentDTO.bank_account = resident.getBankAccount();
+        residentDTO.fullName = resident.getFullName();
+        residentDTO.room = RoomDTO.toDto(resident.getRoom());
+        residentDTO.bankAccount = resident.getBankAccount();
         residentDTO.version = resident.getVersion();
 
         return residentDTO;
     }
 
     @Override
-    public String toString(){ return "Resident: " + id + " " + full_name + " " + roomDTO.wardDTO  + " " + bank_account; }
+    public String toString(){ return "Resident: " + id + " " + fullName + " " + room.ward + " " + bankAccount; }
 }

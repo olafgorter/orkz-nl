@@ -1,5 +1,3 @@
 /src/main/webapp/
-workspace.xml
-target/*
-*.class
-*.jar
+/target/*
+/.idea/*

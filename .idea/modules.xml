@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/orkz-nl.iml" filepath="$PROJECT_DIR$/orkz-nl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/orkznl.iml" filepath="$PROJECT_DIR$/orkznl.iml" />
     </modules>
   </component>
 </project>

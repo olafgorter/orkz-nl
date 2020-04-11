@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dffe7bcd-d1d6-4bf6-a645-6b90fa35bc90" name="Default Changelist" comment="">
+    <list default="true" id="dffe7bcd-d1d6-4bf6-a645-6b90fa35bc90" name="Default Changelist" comment="first commit olaf">
+      <change afterPath="$PROJECT_DIR$/orkznl.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +26,67 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Git" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring-boot" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mvn" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map>
+                <entry key="spring-boot:run" value="true" />
+                <entry key="Drun.jvmArguments=-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=8080 -Dserver.port=8005" value="false" />
+              </map>
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="orkznl [spring-boot:run...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="spring-boot:run" />
+                <option value="-Drun.jvmArguments=-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=8080 -Dserver.port=8005" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -55,41 +120,115 @@
       <option name="project" value="LOCAL" />
       <updated>1586422097328</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="first commit">
+      <created>1586425005469</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586425005469</updated>
+    </task>
+    <task id="LOCAL-00005" summary="first commit olaf">
+      <created>1586593556652</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586593556652</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="first commit olaf" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit olaf" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="174" width="1092" height="776" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586424917125">
+    <state x="552" y="178" key="#Project_Structure" timestamp="1586425109640">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="174" width="1092" height="776" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586424917125" />
-    <state x="614" y="114" key="CommitChangelistDialog2" timestamp="1586422096895">
+    <state x="552" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1586425109640" />
+    <state x="414" y="174" width="1092" height="776" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586425688296">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="614" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586422096895" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1586421840274">
+    <state x="414" y="174" width="1092" height="776" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586425688296" />
+    <state x="765" y="220" key="#com.intellij.ide.util.MemberChooser" timestamp="1586528839380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586421840274" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1586424829464">
+    <state x="765" y="220" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586528839380" />
+    <state x="614" y="114" key="CommitChangelistDialog2" timestamp="1586593555980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586424829464" />
+    <state x="614" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586593555980" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1586593395516">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586593395516" />
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1586425613156">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586425613156" />
+    <state width="1877" height="267" key="GridCell.Tab.0.bottom" timestamp="1586593526502">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586593526502" />
+    <state width="1877" height="267" key="GridCell.Tab.0.center" timestamp="1586593526502">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586593526502" />
+    <state width="1877" height="267" key="GridCell.Tab.0.left" timestamp="1586593526502">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586593526502" />
+    <state width="1877" height="267" key="GridCell.Tab.0.right" timestamp="1586593526502">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586593526502" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1586425802499">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586425802499" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1586425802499">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586425802499" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1586425802499">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586425802499" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1586425802499">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586425802499" />
     <state x="625" y="218" key="NewModule_or_Project.wizard" timestamp="1586422749541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="625" y="218" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1586422749541" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1586422098573">
+    <state x="440" y="94" key="SettingsEditor" timestamp="1586425455464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586422098573" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586425455464" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1586425007781">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586425007781" />
+    <state x="621" y="231" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586425583039">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="621" y="231" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586425583039" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586421914177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586421914177" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/orkznl/usecase/UserUseCase.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

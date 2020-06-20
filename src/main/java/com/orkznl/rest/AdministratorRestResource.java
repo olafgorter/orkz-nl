@@ -1,9 +1,9 @@
 package com.orkznl.rest;
 
+import com.orkznl.model.ResidentDTO;
 import com.orkznl.model.UserDTO;
+import com.orkznl.usecase.AdministratorUseCase;
 import com.orkznl.usecase.UserUseCase;
-import org.apache.juli.logging.Log;
-import org.json.JSONArray;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,37 +19,23 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/user")
-public class UserRestResource {
+@RequestMapping("/administrator")
+public class AdministratorRestResource {
 
     @Autowired private UserUseCase userUseCase;
+    @Autowired private AdministratorUseCase administratorUseCase;
 
-    private final Logger LOG = LoggerFactory.getLogger("UserRestResource");
-
-    @CrossOrigin
-    @RequestMapping("/getallusers")
-    public ResponseEntity<List<UserDTO>> getAllUsers(){
-
-        List<UserDTO> userDTOs = userUseCase.getAllUsers();
-        return new ResponseEntity<>(userDTOs, HttpStatus.OK);
-    }
+    private final Logger LOG = LoggerFactory.getLogger("AdministratorRestResource");
 
     @CrossOrigin
-    @RequestMapping("/login")
-    public ResponseEntity<UserDTO> login(@RequestBody String request) {
-        JSONObject jsonObject = new JSONObject(request);
-        String username = jsonObject.getString("username");
-        String password = jsonObject.getString("password");
+    @RequestMapping("/getResidents")
+    public ResponseEntity<List<ResidentDTO>> getResidents(){
 
-        UserDTO userDTO = userUseCase.login(username, password);
+        List<ResidentDTO> residentDTOs = administratorUseCase.getResidents();
 
-        if(userDTO == null){
-            userDTO = new UserDTO();
-            userDTO.id = -1L;
-        }
-
-        return new ResponseEntity<>(userDTO, HttpStatus.OK);
+        return new ResponseEntity<>(residentDTOs, HttpStatus.OK);
     }
+
     @CrossOrigin
     @RequestMapping( "/save")
     public ResponseEntity<String> save(@RequestBody UserDTO userDTO){

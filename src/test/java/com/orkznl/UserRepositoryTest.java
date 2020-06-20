@@ -27,10 +27,10 @@ public class UserRepositoryTest {
     @Ignore
     public void testFindByName() {
 
-        entityManager.persist(new User("Harrie", "harrie1!", "harrie@harrie.nl"));
-
-        System.out.println("\nfindAll()");
-        repository.findAll().forEach(System.out::println);
+//        entityManager.persist(new User("Harrie", "harrie1!", "harrie@harrie.nl", ));
+//
+//        System.out.println("\nfindAll()");
+//        repository.findAll().forEach(System.out::println);
 
         //assertEquals(1, users.size());
 

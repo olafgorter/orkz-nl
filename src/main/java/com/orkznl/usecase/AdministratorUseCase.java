@@ -10,23 +10,16 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Component
-public class ResidentUseCase {
+public class AdministratorUseCase {
 
     @Autowired
     private ResidentRepository residentRepository;
 
     @Transactional
-    public List<ResidentDTO> getAllResidents(){
+    public List<ResidentDTO> getResidents(){
+
         List<Resident> residents = residentRepository.findAll();
-
         return ResidentDTO.toDto(residents);
+
     }
-
-    @Transactional
-    public ResidentDTO getById(Long id){
-        Resident resident = residentRepository.getById(id);
-
-        return ResidentDTO.toDto(resident);
-    }
-
 }

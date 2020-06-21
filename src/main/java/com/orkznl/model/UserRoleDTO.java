@@ -9,17 +9,21 @@ public class UserRoleDTO {
     public RoleDTO role;
     public Integer version;
 
-    public static List<UserRoleDTO> toDto(List<UserRole> userrols){
-        List<UserRoleDTO> userroleDTOs = userrols.stream().map(UserRoleDTO::toDto).collect(Collectors.toList());
+    public static List<UserRoleDTO> toDto(List<UserRole> userroles, int level){
+        List<UserRoleDTO> userroleDTOs = userroles.stream().map(userRole -> UserRoleDTO.toDto(userRole,level)).collect(Collectors.toList());
         return userroleDTOs;
     }
 
-    public static UserRoleDTO toDto(UserRole userrole){
+    public static UserRoleDTO toDto(UserRole userRole, int level){
+        level--;
         UserRoleDTO userroleDTO = new UserRoleDTO();
-        userroleDTO.id = userrole.getId();
-        userroleDTO.user = UserDTO.toDto( userrole.getUser());
-        userroleDTO.role = RoleDTO.toDto( userrole.getRole());
-        userroleDTO.version = userrole.getVersion();
+        userroleDTO.id = userRole.getId();
+        userroleDTO.version = userRole.getVersion();
+
+        if(level >= 0) {
+            userroleDTO.user = UserDTO.toDto(userRole.getUser(), level);
+            userroleDTO.role = RoleDTO.toDto(userRole.getRole());
+        }
 
         return userroleDTO;
     }

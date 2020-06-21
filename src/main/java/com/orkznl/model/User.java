@@ -1,6 +1,7 @@
 package com.orkznl.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class User {
@@ -78,7 +79,9 @@ public class User {
         return version;
     }
 
-
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
 
 }
 

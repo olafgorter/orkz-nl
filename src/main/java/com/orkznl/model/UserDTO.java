@@ -8,25 +8,33 @@ public class UserDTO {
     public String username;
     public String password;
     public String email;
-    public ResidentDTO resident;
     public Integer version;
 
-    public static List<UserDTO> toDto(List<User> users){
-        List<UserDTO> userDTOs = users.stream().map(UserDTO::toDto).collect(Collectors.toList());
+    public ResidentDTO resident;
+
+    public List<UserRoleDTO> userRoles;
+
+    public static List<UserDTO> toDto(List<User> users, int level){
+        List<UserDTO> userDTOs = users.stream().map(user -> UserDTO.toDto(user,level)).collect(Collectors.toList());
 
         System.out.println(userDTOs.size());
 
         return userDTOs;
     }
 
-    public static UserDTO toDto(User user){
+    public static UserDTO toDto(User user, int level){
+        level--;
+
         UserDTO userDTO = new UserDTO();
         userDTO.id = user.getId();
         userDTO.username = user.getUsername();
         userDTO.password = user.getPassword();
         userDTO.email = user.getEmail();
-        userDTO.resident =  ResidentDTO.toDto( user.getResident());
         userDTO.version = user.getVersion();
+
+        if(level > 0) {
+            userDTO.resident = ResidentDTO.toDto(user.getResident());
+        }
 
         return userDTO;
     }

@@ -11,6 +11,7 @@ public class UserRole {
 
     @ManyToOne
     private User user;
+
     @ManyToOne
     private Role role;
 

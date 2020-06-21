@@ -35,6 +35,18 @@ public class UserRestResource {
     }
 
     @CrossOrigin
+    @RequestMapping("/getUser")
+    public ResponseEntity<UserDTO> getUser(@RequestBody String request){
+
+        JSONObject jsonObject = new JSONObject(request);
+
+        Long id = jsonObject.getLong("id");
+
+        UserDTO userDTO = userUseCase.getUser(id);
+        return new ResponseEntity<>(userDTO, HttpStatus.OK);
+    }
+
+    @CrossOrigin
     @RequestMapping("/login")
     public ResponseEntity<UserDTO> login(@RequestBody String request) {
         JSONObject jsonObject = new JSONObject(request);

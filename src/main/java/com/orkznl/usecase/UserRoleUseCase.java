@@ -19,7 +19,7 @@ public class UserRoleUseCase {
     public List<UserRoleDTO> getAllUserroles(){
         List<UserRole> userroles = userroleRepository.findAll();
 
-        return UserRoleDTO.toDto(userroles);
+        return UserRoleDTO.toDto(userroles, 2);
 
     }
 }

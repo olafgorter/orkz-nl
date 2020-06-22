@@ -2,8 +2,10 @@ package com.orkznl.rest;
 
 import com.orkznl.model.ResidentDTO;
 import com.orkznl.model.UserDTO;
+import com.orkznl.model.ChargeDTO;
 import com.orkznl.usecase.AdministratorUseCase;
 import com.orkznl.usecase.UserUseCase;
+import com.orkznl.usecase.ChargeUseCase;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +26,7 @@ public class AdministratorRestResource {
 
     @Autowired private UserUseCase userUseCase;
     @Autowired private AdministratorUseCase administratorUseCase;
+    @Autowired private ChargeUseCase chargeUseCase;
 
     private final Logger LOG = LoggerFactory.getLogger("AdministratorRestResource");
 
@@ -74,4 +77,41 @@ public class AdministratorRestResource {
         return new ResponseEntity<>(response.toString(), HttpStatus.OK);
     }
 
+    @CrossOrigin
+    @RequestMapping( "/saveCharge")
+    public ResponseEntity<String> saveCharge(@RequestBody ChargeDTO chargeDTO){
+
+        if(chargeDTO == null) {
+            return new ResponseEntity<String>("", HttpStatus.OK);
+        }
+
+        ChargeDTO savedChargeDTO = chargeUseCase.save(chargeDTO);
+
+        JSONObject response = new JSONObject();
+        response.put("charge", chargeDTO);
+
+        if(savedChargeDTO == null || savedChargeDTO.id <= 0){
+            response.put("saved", "n");
+        } else {
+            response.put("saved", "y");
+        }
+
+        return new ResponseEntity<>(response.toString(), HttpStatus.OK);
+    }
+
+    @CrossOrigin
+    @RequestMapping( "/deleteCharge")
+    public ResponseEntity<String> deleteCharge(@RequestBody String request){
+
+        JSONObject jsonObject = new JSONObject(request);
+
+        Long chargeId = jsonObject.getLong("chargeId");
+
+        chargeUseCase.deleteCharge(chargeId);
+
+        JSONObject response = new JSONObject();
+        response.put("result", "deleted");
+
+        return new ResponseEntity<>(response.toString(), HttpStatus.OK);
+    }
 }

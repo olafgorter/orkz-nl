@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dffe7bcd-d1d6-4bf6-a645-6b90fa35bc90" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/rest/AdministratorRestResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/AdministratorUseCase.java" afterDir="false" />
+    <list default="true" id="dffe7bcd-d1d6-4bf6-a645-6b90fa35bc90" name="Default Changelist" comment="awasome delete charge">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orkznl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/orkznl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/orkznl/ApplicationConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/ApplicationConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/orkznl/rest/UserRestResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/rest/UserRestResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/ChargePriceUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/ChargePriceUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/orkznl/repository/ChargeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/repository/ChargeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/orkznl/rest/AdministratorRestResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/rest/AdministratorRestResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/orkznl/security/AVKSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/security/AVKSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/ChargeUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/ChargeUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/PaymentUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/PaymentUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/ResidentChargeUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/ResidentChargeUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/ResidentUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/ResidentUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/RoleUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/RoleUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/RoomUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/RoomUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/UserRoleUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/UserRoleUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/UserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/UserUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/WardUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/orkznl/usecase/WardUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +166,8 @@
     <MESSAGE value="first commit olaf" />
     <MESSAGE value="suck it" />
     <MESSAGE value="awesomeness" />
-    <option name="LAST_COMMIT_MESSAGE" value="awesomeness" />
+    <MESSAGE value="awasome delete charge" />
+    <option name="LAST_COMMIT_MESSAGE" value="awasome delete charge" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Project_Structure" timestamp="1586425109640">
@@ -198,10 +188,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2434" y="274" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/55.24.1865.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1592720274121" />
-    <state x="2534" y="118" key="CommitChangelistDialog2" timestamp="1592665027009">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="614" y="114" key="CommitChangelistDialog2" timestamp="1592824925437">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="614" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586593649135" />
+    <state x="614" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592824925437" />
     <state x="2534" y="118" key="CommitChangelistDialog2/55.24.1865.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1592665027009" />
     <state width="535" height="506" key="DebuggerActiveHint" timestamp="1592724258720">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -215,25 +205,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586425613156" />
-    <state width="1717" height="205" key="GridCell.Tab.0.bottom" timestamp="1592664560981">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1877" height="324" key="GridCell.Tab.0.bottom" timestamp="1592826669940">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586600693677" />
+    <state width="1877" height="324" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592826669940" />
     <state width="1717" height="205" key="GridCell.Tab.0.bottom/55.24.1865.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1592664560981" />
-    <state width="1717" height="205" key="GridCell.Tab.0.center" timestamp="1592664560981">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1877" height="324" key="GridCell.Tab.0.center" timestamp="1592826669940">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586600693676" />
+    <state width="1877" height="324" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592826669940" />
     <state width="1717" height="205" key="GridCell.Tab.0.center/55.24.1865.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1592664560981" />
-    <state width="1717" height="205" key="GridCell.Tab.0.left" timestamp="1592664560980">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1877" height="324" key="GridCell.Tab.0.left" timestamp="1592826669940">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586600693675" />
+    <state width="1877" height="324" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592826669940" />
     <state width="1717" height="205" key="GridCell.Tab.0.left/55.24.1865.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1592664560980" />
-    <state width="1717" height="205" key="GridCell.Tab.0.right" timestamp="1592664560981">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1877" height="324" key="GridCell.Tab.0.right" timestamp="1592826669940">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586600693677" />
+    <state width="1877" height="324" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592826669940" />
     <state width="1717" height="205" key="GridCell.Tab.0.right/55.24.1865.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1592664560981" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1586425802499">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -276,10 +266,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="621" y="231" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586425583039" />
-    <state x="2543" y="234" width="672" height="705" key="search.everywhere.popup" timestamp="1592659746296">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1592808629031">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586421914177" />
+    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592808629031" />
+    <state x="690" y="311" key="git4idea.merge.GitPullDialog" timestamp="1592806926193">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592806926193" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1592818971143">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592818971143" />
     <state x="2543" y="234" width="672" height="705" key="search.everywhere.popup/55.24.1865.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1592659746296" />
   </component>
   <component name="XDebuggerManager">
@@ -287,7 +285,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/orkznl/usecase/UserUseCase.java</url>
-          <line>43</line>
+          <line>46</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

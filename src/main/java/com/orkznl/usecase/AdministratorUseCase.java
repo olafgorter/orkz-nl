@@ -20,6 +20,13 @@ public class AdministratorUseCase {
 
         List<Resident> residents = residentRepository.findAll();
         return ResidentDTO.toDto(residents);
-
     }
+
+    @Transactional
+    public ResidentDTO getResident(Long id){
+
+        Resident resident = residentRepository.getById(id);
+        return ResidentDTO.toDto(resident);
+    }
+
 }

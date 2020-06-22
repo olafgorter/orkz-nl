@@ -40,6 +40,15 @@ public class AdministratorRestResource {
     }
 
     @CrossOrigin
+    @RequestMapping("/getResident")
+    public ResponseEntity<ResidentDTO> getResident(@RequestBody Long id){
+
+        ResidentDTO residentDTO = administratorUseCase.getResident(id);
+
+        return new ResponseEntity<>(residentDTO, HttpStatus.OK);
+    }
+
+    @CrossOrigin
     @RequestMapping( "/saveUser")
     public ResponseEntity<String> saveUser(@RequestBody UserDTO userDTO){
 

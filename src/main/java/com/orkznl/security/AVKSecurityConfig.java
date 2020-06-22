@@ -64,6 +64,7 @@ public class AVKSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/").permitAll()
                 .antMatchers("/administrator/**").permitAll()
+                .antMatchers("/resident/**").permitAll()
                 .antMatchers("/charge/**").permitAll()
                 .antMatchers("/user/**").permitAll()
                 .anyRequest().authenticated()

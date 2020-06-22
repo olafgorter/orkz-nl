@@ -1,22 +1,25 @@
 package com.orkznl.usecase;
 
-import com.orkznl.model.User;
-import com.orkznl.model.UserDTO;
-import com.orkznl.model.UserRole;
-import com.orkznl.model.UserRoleDTO;
+import com.orkznl.model.*;
+import com.orkznl.repository.ResidentRepository;
+import com.orkznl.repository.RoleRepository;
 import com.orkznl.repository.UserRepository;
 import com.orkznl.repository.UserRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
 public class UserUseCase {
 
+    @Autowired private RoleRepository roleRepository;
     @Autowired private UserRepository userRepository;
     @Autowired private UserRoleRepository userRoleRepository;
+    @Autowired private ResidentRepository residentRepository;
+
 
     @Transactional
     public List<UserDTO> getAllUsers(){
@@ -57,6 +60,9 @@ public class UserUseCase {
             user.setEmail(userDTO.email);
             user.setPassword(userDTO.password);
 
+            Resident resident = residentRepository.getById(userDTO.resident.id);
+            user.setResident(resident);
+
         } else {
             // dit is het updaten van een user
             if (!user.getId().equals(userDTO.id)) {
@@ -69,8 +75,28 @@ public class UserUseCase {
 
         User savedUser = userRepository.save(user);
 
+        UserRole userRole = new UserRole();
+        userRole.setUser(savedUser);
+
+        Long userId = 3L;
+
+        Role role = roleRepository.getById(userId);
+
+        userRole.setRole(role);
+
+        userRole = userRoleRepository.save(userRole);
+
         System.out.println("user saved: " + UserDTO.toDto(savedUser, 2));
 
-        return UserDTO.toDto(user, 2);
+        UserDTO savedUserDTO = UserDTO.toDto(user, 2);
+
+        savedUserDTO.userRoles = new ArrayList<>();
+        savedUserDTO.userRoles.add(UserRoleDTO.toDto(userRole, 1));
+
+        return savedUserDTO;
+    }
+
+    public void deleteUser(Long id) {
+        userRepository.deleteById(id);
     }
 }

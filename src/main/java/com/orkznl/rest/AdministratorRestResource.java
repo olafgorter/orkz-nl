@@ -37,8 +37,8 @@ public class AdministratorRestResource {
     }
 
     @CrossOrigin
-    @RequestMapping( "/save")
-    public ResponseEntity<String> save(@RequestBody UserDTO userDTO){
+    @RequestMapping( "/saveUser")
+    public ResponseEntity<String> saveUser(@RequestBody UserDTO userDTO){
 
         if(userDTO == null) {
             return new ResponseEntity<String>("", HttpStatus.OK);
@@ -57,4 +57,21 @@ public class AdministratorRestResource {
 
         return new ResponseEntity<>(response.toString(), HttpStatus.OK);
     }
+
+    @CrossOrigin
+    @RequestMapping( "/deleteUser")
+    public ResponseEntity<String> deleteUser(@RequestBody String request){
+
+        JSONObject jsonObject = new JSONObject(request);
+
+        Long userId = jsonObject.getLong("userId");
+
+        userUseCase.deleteUser(userId);
+
+        JSONObject response = new JSONObject();
+        response.put("result", "deleted");
+
+        return new ResponseEntity<>(response.toString(), HttpStatus.OK);
+    }
+
 }

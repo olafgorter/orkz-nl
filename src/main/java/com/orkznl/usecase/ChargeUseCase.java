@@ -23,9 +23,10 @@ public class ChargeUseCase {
 
     }
 
+    @Transactional
     public ChargeDTO save(ChargeDTO chargeDTO) {
 
-        Charge charge = chargeRepository.findByDescription(chargeDTO.description);
+        Charge charge = chargeDTO.id != null ? chargeRepository.getById(chargeDTO.id): null;
 
         if(charge == null){
             // dit wordt later de NEW charge
@@ -33,22 +34,15 @@ public class ChargeUseCase {
             charge.setDescription(chargeDTO.description);
 
         } else {
-            // dit is het updaten van een charge
-            if (!charge.getId().equals(chargeDTO.id)) {
-                return null;
-            }
-
+            charge.setDescription(chargeDTO.description);
         }
 
         Charge savedCharge = chargeRepository.save(charge);
 
-        System.out.println("charge saved: " + ChargeDTO.toDto(savedCharge));
-
-        ChargeDTO savedChargeDTO = ChargeDTO.toDto(charge);
-
-        return savedChargeDTO;
+        return ChargeDTO.toDto(savedCharge);
     }
 
+    @Transactional
     public void deleteCharge(Long id) {
         chargeRepository.deleteById(id);
     }

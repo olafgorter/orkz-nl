@@ -1,7 +1,8 @@
 package com.orkznl.usecase;
 
-import com.orkznl.model.Resident;
-import com.orkznl.model.ResidentDTO;
+import com.orkznl.model.*;
+import com.orkznl.repository.ChargeRepository;
+import com.orkznl.repository.ResidentChargeRepository;
 import com.orkznl.repository.ResidentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -14,6 +15,9 @@ public class ResidentUseCase {
 
     @Autowired
     private ResidentRepository residentRepository;
+
+    @Autowired
+    private ResidentChargeRepository residentChargeRepository;
 
     @Transactional
     public List<ResidentDTO> getAllResidents(){
@@ -28,5 +32,15 @@ public class ResidentUseCase {
 
         return ResidentDTO.toDto(resident);
     }
+
+    @Transactional
+    public List<ResidentChargeDTO> getChargesByResident(Long residentId){
+
+        List<ResidentCharge> charges = residentChargeRepository.findByResident_Id(residentId);
+
+        return ResidentChargeDTO.toDto(charges);
+
+    }
+
 
 }

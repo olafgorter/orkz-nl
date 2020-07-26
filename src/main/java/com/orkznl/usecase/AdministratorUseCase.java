@@ -2,7 +2,10 @@ package com.orkznl.usecase;
 
 import com.orkznl.model.Resident;
 import com.orkznl.model.ResidentDTO;
+import com.orkznl.model.Room;
+import com.orkznl.model.RoomDTO;
 import com.orkznl.repository.ResidentRepository;
+import com.orkznl.repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +17,9 @@ public class AdministratorUseCase {
 
     @Autowired
     private ResidentRepository residentRepository;
+
+    @Autowired
+    private RoomRepository roomRepository;
 
     @Transactional
     public List<ResidentDTO> getResidents(){
@@ -27,6 +33,13 @@ public class AdministratorUseCase {
 
         Resident resident = residentRepository.getById(id);
         return ResidentDTO.toDto(resident);
+    }
+
+    @Transactional
+    public List<RoomDTO> getRooms(){
+
+        List<Room> rooms = roomRepository.findAll();
+        return RoomDTO.toDto(rooms);
     }
 
 }

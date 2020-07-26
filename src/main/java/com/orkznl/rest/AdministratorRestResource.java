@@ -1,6 +1,7 @@
 package com.orkznl.rest;
 
 import com.orkznl.model.ResidentDTO;
+import com.orkznl.model.RoomDTO;
 import com.orkznl.model.UserDTO;
 import com.orkznl.model.ChargeDTO;
 import com.orkznl.usecase.AdministratorUseCase;
@@ -123,4 +124,14 @@ public class AdministratorRestResource {
 
         return new ResponseEntity<>(response.toString(), HttpStatus.OK);
     }
+
+    @CrossOrigin
+    @RequestMapping("/getRooms")
+    public ResponseEntity<List<RoomDTO>> getRooms(){
+
+        List<RoomDTO> roomDTOs = administratorUseCase.getRooms();
+
+        return new ResponseEntity<>(roomDTOs, HttpStatus.OK);
+    }
+
 }

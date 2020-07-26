@@ -12,4 +12,6 @@ public interface ResidentChargeRepository extends CrudRepository<ResidentCharge,
 
     List<ResidentCharge> findAll();
 
+    List<ResidentCharge> findByResident_Id(Long residentId);
+
 }
